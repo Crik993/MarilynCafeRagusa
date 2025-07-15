@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Pizzeria - Marilyn Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #fffaf0;
+      color: #222;
+    }
+
+    .menu-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff5e1;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .menu-header img {
+      width: 250px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #8b4513;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #a0522d;
+      border-bottom: 2px solid #d2b48c;
+      padding-bottom: 10px;
+      margin-top: 40px;
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .price-table th, .price-table td {
+      padding: 12px 8px;
+      text-align: left;
+    }
+
+    .price-table th {
+      background-color: #f0e0c0;
+      color: #5a3e1b;
+      font-size: 1em;
+    }
+
+    .price-table td {
+      border-bottom: 1px dashed #d2b48c;
+      vertical-align: top;
+    }
+
+    .pizza-name {
+      font-weight: bold;
+    }
+
+    .pizza-desc {
+      font-style: italic;
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    .price-cell {
+      text-align: center;
+      white-space: nowrap;
+    }
+     .home-button {
+      display: inline-block;
+      background-color: #8b4513;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 8px;
+      margin: 10px auto;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .home-button:hover {
+      background-color: #a0522d;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .price-table th, .price-table td {
+        font-size: 0.9em;
+        padding: 8px 5px;
+      }
+
+      .pizza-desc {
+        display: block;
+        margin-top: 4px;
+      }
+
+    }
+  </style>
+  <div class="slideshow-container"> 
+    <div class="mySlides fade">
+    <img src="immagini/foto1.jpg" />
+  </div>
+  <div class="mySlides fade">
+    <img src="immagini/foto2.jpg" />
+  </div>
+  <div class="mySlides fade">
+    <img src="immagini/foto3.jpg" class="foto3-crop" />
+  </div>
+  <div class="mySlides fade">
+    <img src="immagini/foto4.jpg" class="foto4-crop" />
+  </div>
+  <div class="mySlides fade">
+    <img src="immagini/foto5.jpg" class="foto5-crop"/>
+  </div>
+  <div class="mySlides fade">
+    <img src="immagini/foto6.jpg" />
+  </div>
+  <div class="mySlides fade">
+    <img src="immagini/foto7.jpg" class="foto7-crop" />
+  </div>
+  <div class="mySlides fade">
+    <img src="immagini/foto8.jpg" />
+  </div>
+  <div class="mySlides fade">
+    <img src="immagini/foto9.jpg" />
+  </div>
+ </div>
+</head>
+<body>
+   
+  
+  
+
+  <div class="menu-container">
+    <div class="button-container">
+      <a href="index.html" class="home-button">← Torna alla Home</a>
+    </div>
+    <div class="menu-header">
+      <img src="immagini/logo.png" alt="Logo Marilyn Café">
+      <h1>Menu Pizzeria</h1>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000); // Cambia immagine ogni 3 secondi
+}
+</script>
+    <h2>Pizze Classiche</h2>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Pizza</th>
+          <th class="price-cell">Baby</th>
+          <th class="price-cell">Normale</th>
+          <th class="price-cell">Maxi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="pizza-name">Marinara</div>
+            <div class="pizza-desc">Doppio pomodoro</div>
+          </td>
+          <td class="price-cell">€3.00</td>
+          <td class="price-cell">€4.00</td>
+          <td class="price-cell">€10.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Faccia di vecchia</div>
+            <div class="pizza-desc">Olio, sale e origano</div>
+          </td>
+          <td class="price-cell">€2.00</td>
+          <td class="price-cell">€3.00</td>
+          <td class="price-cell"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Biancaneve</div>
+            <div class="pizza-desc">Doppia mozzarella</div>
+          </td>
+          <td class="price-cell">€3.50</td>
+          <td class="price-cell">€5.00</td>
+          <td class="price-cell">€13.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Margherita</div>
+            <div class="pizza-desc">Mozzarella, pomodoro</div>
+          </td>
+          <td class="price-cell">€4.50</td>
+          <td class="price-cell">€5.50</td>
+          <td class="price-cell">€13.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Capricciosa</div>
+            <div class="pizza-desc">Mozzarella, pom., prosc. cotto, funghi, carciofi, olive</div>
+          </td>
+          <td class="price-cell">€6.50</td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€20.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">007</div>
+            <div class="pizza-desc">Mozz., pomodoro, prosc. cotto, uovo, piselli*, wurstel</div>
+          </td>
+          <td class="price-cell">€6.50</td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€20.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">4 Stagioni</div>
+            <div class="pizza-desc">Mozzarella, pom., prosc. cotto, spinaci*, olive nere</div>
+          </td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€19.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">4 Formaggi</div>
+            <div class="pizza-desc">Mozzarella, provola, gorgonzola, grana</div>
+          </td>
+          <td class="price-cell">€6.50</td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€19.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Parmigiana</div>
+            <div class="pizza-desc">Mozz., pom., prosc. cotto, uovo sbriciolato, melanzana fritta, pom. a pezzi, grana</div>
+          </td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€8.50</td>
+          <td class="price-cell">€20.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Norma</div>
+            <div class="pizza-desc">Mozzarella, pomodoro, melanzana fritta, ricotta salata</div>
+          </td>
+          <td class="price-cell">€5.50</td>
+          <td class="price-cell">€6.50</td>
+          <td class="price-cell">€18.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Delicata</div>
+            <div class="pizza-desc">Mozzarella, pomodoro, prosc. cotto, uovo, porcini</div>
+          </td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€21.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Vegetariana</div>
+            <div class="pizza-desc">Pomodoro, melanzana arrosto, zucchine, spinaci*, cipolla, funghi, peperoni</div>
+          </td>
+          <td class="price-cell">€5.00</td>
+          <td class="price-cell">€6.50</td>
+          <td class="price-cell">€18.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Patapizza</div>
+            <div class="pizza-desc">Mozzarella, pomodoro, patatine fritte*</div>
+          </td>
+          <td class="price-cell">€6.50</td>
+          <td class="price-cell">€6.50</td>
+          <td class="price-cell">€16.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Bufala</div>
+            <div class="pizza-desc">Mozzarella di bufala, pomodoro a pezzi</div>
+          </td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€19.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Trevigiana</div>
+            <div class="pizza-desc">Mozzarella, radicchio, gorgonzola, speck</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell">€24.00</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Fior di zucca</div>
+            <div class="pizza-desc">Mozzarella, crema di zucca, funghi porcini</div>
+          </td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€24.00</td>
+        </tr>
+        <td>
+            <div class="pizza-name">Tirolose</div>
+            <div class="pizza-desc">Mozzarella, crema di noci, funghi porcini, speck , grana</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.50</td>
+          <td class="price-cell">€26.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Carciospeck</div>
+            <div class="pizza-desc">Mozzarella, crema di carciofi, carciofi, speck, grana</div>
+          </td>
+          <td class="price-cell">€6.50</td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell">€22.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Nettuno</div>
+            <div class="pizza-desc">Mozzarella, radicchio, gamberi*, salmone affumicato, pom. a pezzi</div>
+          </td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€9.00</td>
+          <td class="price-cell">€26.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Frutti di mare</div>
+            <div class="pizza-desc">Mozzarella, ciliegino, cozze*, vongole*, polpo*, gamberi*</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.50</td>
+          <td class="price-cell">€25.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Nocispeck</div>
+            <div class="pizza-desc">Mozzarella, crema di noci, rucola, speck, grana</div>
+          </td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€9.00</td>
+          <td class="price-cell">€22.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Isolana</div>
+            <div class="pizza-desc">Mozzarella, zucchine fritte, olive verdi, gamberi*, mollica</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell">€25.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Tonno e cipolla</div>
+            <div class="pizza-desc">Mozzarella, pomodoro, tonno, cipolla</div>
+          </td>
+          <td class="price-cell">€6.50</td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€18.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Cavallo pazzo</div>
+            <div class="pizza-desc">Mozzarella, cavallo, funghi, cipolla, grana</div>
+          </td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell">€8.50</td>
+          <td class="price-cell">€25.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Normanna</div>
+            <div class="pizza-desc">Mozzarella, patate al forno, salsiccia fresca, peperone arrosto, mollica</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.50</td>
+          <td class="price-cell">€23.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Contadina</div>
+            <div class="pizza-desc">Mozzarella, pomodoro, ricotta fresca, salsiccia fresca, spinaci*</div>
+          </td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell">€21.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Veronese</div>
+            <div class="pizza-desc">Mozzarella, mortadella, philadelphia, pesto di pistacchio</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€9.00</td>
+          <td class="price-cell">€24.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Bresaola</div>
+            <div class="pizza-desc">Mozzarella, rucola, pomodoro a pezzi, bresaola, grana</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.50</td>
+          <td class="price-cell">€25.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Rucola</div>
+            <div class="pizza-desc">Mozzarella, rucola, pomodoro, prosc. crudo, grana</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.50</td>
+          <td class="price-cell">€21.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Diavola</div>
+            <div class="pizza-desc">Mozzarella, pomodoro, prosc. cotto, salame piccante, funghi</div>
+          </td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell">€7.50</td>
+          <td class="price-cell">€19.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Regina</div>
+            <div class="pizza-desc">Mozzarella, melanzana fritta, pesce spada*, ciliegino, menta</div>
+          </td>
+          <td class="price-cell">€11.50</td>
+          <td class="price-cell">€13.00</td>
+          <td class="price-cell">€29.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Calzone</div>
+            <div class="pizza-desc">Mozzarella, prosc. cotto, funghi, wurstel</div>
+          </td>
+          <td class="price-cell">€5.50</td>
+          <td class="price-cell"></td>
+          <td class="price-cell"></td>
+        </tr>
+         <td>
+            <div class="pizza-name">Del pizzaiolo</div>
+            <div class="pizza-desc">Mozzarella, crema di zucca, funghi porcini, ricotta, speck infornato</div>
+          </td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell">€9.00</td>
+          <td class="price-cell">€24.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Tacchinella</div>
+            <div class="pizza-desc">Mozzarella, tacchinella, radicchio, philadelphia, pesto</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell">€22.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">La campana</div>
+            <div class="pizza-desc">Mozzarella, friarelli, salsiccia fresca, tarallo</div>
+          </td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell">€9.00</td>
+          <td class="price-cell">€23.00</td>
+        </tr>
+         <td>
+            <div class="pizza-name">Porchetta potente</div>
+            <div class="pizza-desc">Mozzarella, porchetta, provola affumicata, porcini, cipolla, olive nere</div>
+          </td>
+          <td class="price-cell">€9.00</td>
+          <td class="price-cell">€10.00</td>
+          <td class="price-cell">€23.00</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <h2>Sfilatini</h2>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Sfilatino</th>
+          <th class="price-cell">1 misura</th>
+          <th class="price-cell"></th>
+          <th class="price-cell"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="pizza-name">Di cavallo</div>
+            <div class="pizza-desc">Mozzarella, sfilacci di cavallo, funghi, cipolla, grana</div>
+          </td>
+          <td class="price-cell">€10.00</td>
+          <td class="price-cell"></td>
+          <td class="price-cell"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Saporito</div>
+            <div class="pizza-desc">Mozzarella, rucola, speck, funghi porcini</div>
+          </td>
+          <td class="price-cell">€9.50</td>
+          <td class="price-cell"></td>
+          <td class="price-cell"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Porchetta</div>
+            <div class="pizza-desc">Mozzarella, porchetta, salame piccante, prosciutto cotto</div>
+          </td>
+          <td class="price-cell">€9.50</td>
+          <td class="price-cell"></td>
+          <td class="price-cell"></td>
+        </tr>
+      </tbody>
+      </table>
+      <h2>Scaccioni</h2>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Scaccioni</th>
+          <th class="price-cell">1 misura</th>
+          <th class="price-cell"></th>
+          <th class="price-cell"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="pizza-name">Cartoccio</div>
+            <div class="pizza-desc">Mozzarella, salame piccante, prosc. cotto, patatine fritte*</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell"></td>
+          <td class="price-cell"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Porchettata</div>
+            <div class="pizza-desc">Mozzarella, porchetta affumicata, patatine fritte*</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell"></td>
+          <td class="price-cell"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Del fantino</div>
+            <div class="pizza-desc">Mozzarella, sfilacci di cavallo, funghi, cipolla</div>
+          </td>
+          <td class="price-cell">€8.50</td>
+          <td class="price-cell"></td>
+          <td class="price-cell"></td>
+          <tr>
+          <td>
+            <div class="pizza-name">Trevigiano</div>
+            <div class="pizza-desc">Mozzarella, radicchio, porcini, speck</div>
+          </td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell"></td>
+          <td class="price-cell"></td>
+          <tr>
+          <td>
+            <div class="pizza-name">Topolino</div>
+            <div class="pizza-desc">Mozzarella, wurstel, patatine fritte*</div>
+          </td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell"></td>
+          <td class="price-cell"></td>
+          
+        </tr>
+          
+        </tr>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Pizze dolci</h2>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Pizza</th>
+          <th class="price-cell">Baby</th>
+          <th class="price-cell">Normale</th>
+          <th class="price-cell">Maxi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="pizza-name">Nutella</div>
+            <div class="pizza-desc">Nutella, noccioline, zucchero a velo</div>
+          </td>
+          <td class="price-cell">€5.00</td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Variegata</div>
+            <div class="pizza-desc">Ricotta dolce, variegata di nutella</div>
+          </td>
+          <td class="price-cell">€6.00</td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Marilyn</div>
+            <div class="pizza-desc">crema dolce, frutta</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Pistacchiosa</div>
+            <div class="pizza-desc">Nutella bianca, variegata di pistacchio</div>
+          </td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell">€9.00</td>
+          <td class="price-cell"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="pizza-name">Scomposta</div>
+            <div class="pizza-desc">Ricotta, cannolo sbriciolato, cannella, pistacchio</div>
+          </td>
+          <td class="price-cell">€7.00</td>
+          <td class="price-cell">€8.00</td>
+          <td class="price-cell"></td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+    <div class="button-container">
+      <a href="index.html" class="home-button">← Torna alla Home</a>
+    </div>
+  </div>
+</body>
+</html>

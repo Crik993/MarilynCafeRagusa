@@ -1,0 +1,244 @@
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.index-page .hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(196, 114, 114, 0.5), rgba(0, 0, 0, 0.5)), url("immagini/home.jpg");
+/* Set a specific height */
+  height: 100%;
+ /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.pizzeria-page .hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(196, 114, 114, 0.5), rgba(0, 0, 0, 0.5)), url("immagini/pizzeria.jpg");
+/* Set a specific height */
+  height: 100%;
+ /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+.contatti-page .hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(196, 114, 114, 0.5), rgba(0, 0, 0, 0.5)), url("");
+/* Set a specific height */
+  height: 100%;
+ /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: bisque;
+  
+}
+
+.bar-page .hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(196, 114, 114, 0.5), rgba(0, 0, 0, 0.5)), url("immagini/bar.jpg");
+/* Set a specific height */
+  height: 100%;
+ /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: bisque;
+  
+}
+
+.dovesiamo-page .hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(196, 114, 114, 0.5), rgba(0, 0, 0, 0.5)), url("");
+/* Set a specific height */
+  height: 100%;
+ /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: bisque;
+  
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 6em;
+    color: bisque;
+}
+
+p {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5em;
+    color: white;
+    
+    
+}
+button {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.hero-buttons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.button:hover {
+    background-color: #e3c4a8; /* colore hover */
+}
+
+.hero-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 0.8em;
+}
+
+.hero-logo {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+}
+
+.hero-logo img {
+    width: 180px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: add some border radius for aesthetics */
+}
+
+.hero-social {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    
+    
+}
+
+.hero-social img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    margin-left: 10px; /* Space between icons */
+    
+    
+}
+
+.contatti-page .hero-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spazio tra le icone */
+    margin-top: 15px;
+    position: static;
+    
+}
+
+.dovesiamo-page .hero-social {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+    
+}
+
+
+.hero-map {
+    margin: 20px auto;
+    width: 100%;
+}
+
+.slideshow-container {
+  width: 100vw;
+  height: 300px ;
+  overflow: hidden;
+  position: relative;
+  border: #e3c4a8 5px solid;
+  
+}
+
+.mySlides {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  animation: fade 1.5s;
+}
+
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;        /* evita spazio sotto l'immagine */   
+}
+
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+.foto3-crop {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+  object-position: 40% 70%; /* cambia questo valore per spostare l'area visibile */
+}
+.foto4-crop {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 20%; /* cambia questo valore per spostare l'area visibile */
+}
+.foto5-crop {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 60%; /* cambia questo valore per spostare l'area visibile */
+}
+.foto7-crop {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 40%; /* cambia questo valore per spostare l'area visibile */
+}
+
+
+
+
+
